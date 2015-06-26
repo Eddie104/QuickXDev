@@ -1,4 +1,6 @@
 [
     { "keys": ["ctrl+shift+g"], "command": "quickx_goto_definition" },
-    { "keys": ["ctrl+shift+r"], "command": "quickx_run_with_player_by_file" }
+    { "keys": ["ctrl+shift+r"], "command": "quickx_run_with_player_by_file" },
+    { "keys": ["ctrl+shift+1"], "command": "quickx_create_getter_and_setter" },
+    { "keys": ["ctrl+shift+2"], "command": "quickx_update_lua" }
 ]

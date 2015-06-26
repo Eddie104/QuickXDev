@@ -2,5 +2,6 @@
     { "caption": "-", "id": "quickx_start" },
     { "command": "quickx_goto_definition", "caption": "Goto Definition" },
     { "command": "quickx_run_with_player_by_file", "caption": "Run With Player" },
+    { "command": "quickx_create_getter_and_setter", "caption": "Getter And Setter" },
     { "caption": "-", "id": "quickx_end" }
 ]
