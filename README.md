@@ -65,3 +65,14 @@ select a word then right click ->Goto Definition or press key ctrl+shift+g
 
  right click "src" folder on the sidebar,select "Rebuild User Definition".
  and when you save a lua file in sublime,it will auto build all user definition in the current file.
+ 
+***
+以下是我的一些小修改
+
+1. 在创建lua文件时根据文件名首字母大小写自动创建模板。如果首字母是大写，会自动创建一个“class”模板。
+
+2. 当光标移动到某个下划线开头的私有变量上时，按下Ctrl+Shift+1，会自动生成伪getter and setter。
+
+3. 生成的debug.log文件改成使用java主题打开，方便浏览。
+
+4. 在debug.log中双击报错行会自动跳转到相关lua文件。
