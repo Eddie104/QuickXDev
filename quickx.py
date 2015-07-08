@@ -224,6 +224,8 @@ def runWithPlayer(srcDir):
             process.terminate()
         except Exception:
             pass
+    # args.append("-disable-load-framework")
+    args.append("-load-framework")
     if sublime.platform()=="osx":
         process=subprocess.Popen(args)
     elif sublime.platform()=="windows":
@@ -618,6 +620,7 @@ class MySpecialDoubleclickCommand(sublime_plugin.TextCommand):
             # print("line:",line)
             re, filename = self.parseLine(line)
             if re:
+                filename = "src/" + filename
                 self.view.window().open_file(filename, sublime.ENCODED_POSITION)
                 # print("filename", filename)
 
@@ -656,10 +659,9 @@ class MySpecialDoubleclickCommand(sublime_plugin.TextCommand):
         return True, filename+":"+fileline
 
     def parseLine(self, line):
-        re,string = self.parseCocosErrorAndDump(line)
+        re, string = self.parseCocosErrorAndDump(line)
         if re:
             return re,string
-
         return self.parseLuaError(line)
 
 # st3
